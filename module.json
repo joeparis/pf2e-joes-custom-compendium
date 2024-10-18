@@ -1,0 +1,108 @@
+{
+  "id": "pf2e-joes-custom-compendium",
+  "title": "Joe's Custom Compendium",
+  "description": "Custom macros, spells, spell effects and more for Pathfinder Second Edition games played on Foundry VTT.",
+  "version": "#{VERSION}",
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "LICENSE",
+  "readme": "README.md",
+  "socket": false,
+  "protected": false,
+  "coreTranslation": false,
+  "library": false,
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Joe",
+      "url": "https://github.com/joeparis/",
+      "discord": "sarcasmasaservice",
+      "flags": {}
+    }
+  ],
+  "scripts": [
+    "scripts/pf2e-joes-custom-compendia.js"
+  ],
+  "esmodules": [],
+  "styles": [],
+  "flags": {},
+  "languages": [],
+  "media": [],
+  "packs": [
+    {
+      "name": "macros",
+      "label": "Macros",
+      "banner": "systems/pf2e/assets/compendium-banner/blue.webp",
+      "path": "packs/macros",
+      "type": "Macro",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "spells-and-spell-effects",
+      "label": "Spells & Spell Effects",
+      "banner": "systems/pf2e/assets/compendium-banner/blue.webp",
+      "path": "packs/spells-and-spell-effects",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "rollable-tables",
+      "label": "Rollable Tables",
+      "banner": "systems/pf2e/assets/compendium-banner/blue.webp",
+      "path": "packs/rollable-tables",
+      "type": "JournalEntry",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "actors",
+      "label": "Actors",
+      "banner": "systems/pf2e/assets/compendium-banner/blue.webp",
+      "path": "packs/actors",
+      "type": "Actor",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Joe's Custom Compendia",
+      "color": "#333333",
+      "sorting": "a",
+      "packs": [
+        "actors",
+        "macros",
+        "rollable-tables",
+        "spells-and-spell-effects"
+      ],
+      "folders": []
+    }
+  ]
+}

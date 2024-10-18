@@ -1,0 +1,7 @@
+2024/10/17-11:03:31.155 15ec Recovering log #240
+2024/10/17-11:03:31.165 15ec Delete type=0 #240
+2024/10/17-11:03:31.165 15ec Delete type=3 #238
+2024/10/17-11:27:30.458 6024 Level-0 table #245: started
+2024/10/17-11:27:30.458 6024 Level-0 table #245: 0 bytes OK
+2024/10/17-11:27:30.462 6024 Delete type=0 #243
+2024/10/17-11:27:30.467 6024 Manual compaction at level-0 from '!folders!qf8JcxJiFR6R2XOv' @ 72057594037927935 : 1 .. '!macros!zi6PTtn3iiONwyOn' @ 0 : 0; will stop at (end)
