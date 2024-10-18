@@ -1,0 +1,23 @@
+/* This macro depends on having the token's previous
+x and y coordinates stored in flags on the token. */
+
+const token = canvas.tokens.controlled[0];
+
+if (!token) {
+  ui.notifications.warn("Please select a token first.");
+} else {
+  const prevX = await token.document.getFlag("pf2e-joes-custom-compendia", "prevX") ?? token.x;
+  const prevY = await token.document.getFlag("pf2e-joes-custom-compendia", "prevY") ?? token.y;
+
+  const gridSize = canvas.scene?.grid?.size || 100;
+
+  const dx = prevX < token.x ? -gridSize : prevX > token.x ? gridSize : 0;
+  const dy = prevY < token.y ? -gridSize : prevY > token.y ? gridSize : 0;
+
+  if (dx !== 0 || dy !== 0) {
+    await token.document.update({
+      x: token.x + dx,
+      y: token.y + dy,
+    });
+  }
+};
