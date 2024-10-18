@@ -3,7 +3,7 @@ console.log("Joe's Custom Compendia | Initializing");
 const tokenUpdateMap = new Map();
 const flagCache = new Map();
 
-let joesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, userId) => {
+let pf2eJoesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, userId) => {
   // Prevent re-entry
   if (tokenUpdateMap.get(tokenDocument.id)) return;
   tokenUpdateMap.set(tokenDocument.id, true);
@@ -51,4 +51,4 @@ let joesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, 
   tokenUpdateMap.delete(tokenDocument.id);
 };
 
-Hooks.on("preUpdateToken", joesCustomCompendiaPreUpdateToken);
+Hooks.on("preUpdateToken", pf2eJoesCustomCompendiaPreUpdateToken);
