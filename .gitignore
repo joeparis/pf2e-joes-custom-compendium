@@ -1,8 +1,4 @@
 pf2e-joes-custom-compendium.lock
-/packs/**/LOCK
-/packs/**/LOG
-/packs/**/LOG.old
-
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node
