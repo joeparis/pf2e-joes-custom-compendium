@@ -14,19 +14,19 @@ let joesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, 
     let prevY = flagCache.get(`${tokenDocument.id}-prevY`);
 
     if (prevX === undefined) {
-      prevX = await tokenDocument.getFlag("joes-custom-compendia", "prevX") ?? tokenDocument.x;
+      prevX = await tokenDocument.getFlag("pf2e-joes-custom-compendia", "prevX") ?? tokenDocument.x;
       flagCache.set(`${tokenDocument.id}-prevX`, prevX);
     }
 
     if (prevY === undefined) {
-      prevY = await tokenDocument.getFlag("joes-custom-compendia", "prevY") ?? tokenDocument.y;
+      prevY = await tokenDocument.getFlag("pf2e-joes-custom-compendia", "prevY") ?? tokenDocument.y;
       flagCache.set(`${tokenDocument.id}-prevY`, prevY);
     }
 
     if ((changed.x !== undefined && changed.x !== prevX) || (changed.y !== undefined && changed.y !== prevY)) {
       const updates = {
-        'flags.joes-custom-compendia.prevX': tokenDocument.x,
-        'flags.joes-custom-compendia.prevY': tokenDocument.y,
+        'flags.pf2e-joes-custom-compendia.prevX': tokenDocument.x,
+        'flags.pf2e-joes-custom-compendia.prevY': tokenDocument.y,
       };
       await tokenDocument.update(updates);
 
@@ -47,7 +47,7 @@ let joesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, 
     }
 
   } catch (error) {
-    console.error(`joes-custom-compendia |  Error updating previous position flags for ${tokenDocument.name}:`, error);
+    console.error(`pf2e-joes-custom-compendia |  Error updating previous position flags for ${tokenDocument.name}:`, error);
   }
 
   tokenUpdateMap.delete(tokenDocument.id);
