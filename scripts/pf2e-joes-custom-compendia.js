@@ -30,8 +30,6 @@ let joesCustomCompendiaPreUpdateToken = async (tokenDocument, changed, options, 
       };
       await tokenDocument.update(updates);
 
-      console.log(`joes-custom-compendia |  ${tokenDocument.name}: moved from (${prevX}, ${prevY}) to (${changed.x ?? tokenDocument.x}, ${changed.y ?? tokenDocument.y})`);
-
       const user = game.users.get(userId);
       if (user && user.isGM === false) {
         console.log("Move caused by a player:", user.name);
