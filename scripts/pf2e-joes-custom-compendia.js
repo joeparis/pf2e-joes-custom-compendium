@@ -1,5 +1,16 @@
 console.log("Joe's Custom Compendia | Initializing");
 
+let pf2eJoesCustomCompendiaCreateToken = async (tokenDocument, options, userId) => {
+  try {
+    await tokenDocument.setFlag("pf2e-joes-custom-compendia", "prevX", tokenDocument.x);
+    await tokenDocument.setFlag("pf2e-joes-custom-compendia", "prevY", tokenDocument.y);
+  } catch (error) {
+    console.error(`pf2e-joes-custom-compendia | Error initializing previous position flags for ${tokenDocument.name}:`, error);
+  }
+}
+
+Hooks.on("createToken", pf2eJoesCustomCompendiaCreateToken);
+
 const tokenUpdateMap = new Map();
 const flagCache = new Map();
 
