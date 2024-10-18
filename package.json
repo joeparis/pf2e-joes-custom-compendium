@@ -1,0 +1,17 @@
+{
+  "name": "pf2e-joes-custom-compendium",
+  "description": "Custom macros, spells, spell effects and more for [Pathfinder Second Edition](https://paizo.com/pathfinder) games played on [Foundry VTT](https://foundryvtt.com/).",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeparis/pf2e-joes-custom-compendium.git"
+  },
+  "author": "Joe Paris",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/joeparis/pf2e-joes-custom-compendium/issues"
+  },
+  "homepage": "https://github.com/joeparis/pf2e-joes-custom-compendium#readme"
+}
